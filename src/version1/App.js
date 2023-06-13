@@ -1,35 +1,7 @@
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
-
-
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: props.value };
-  }
-  render() {
-    const buttonClasses = `btn ${this.props.isLeft ? 'btn-danger' : 'btn-success'} rounded-pill`;
-
-    return (
-      <button className={buttonClasses} onClick={() => this.props.onClick(this.state.value)}>
-        {this.state.value}
-      </button>
-    );
-  }
-}
-
-class Line extends React.Component {
-  render() {
-    return (
-      <div className="d-flex justify-content-center line">
-        <Button value={this.props.value1} onClick={this.props.onClick} isLeft={true} />
-        <Button value={this.props.value2} onClick={this.props.onClick} isLeft={false} />
-      </div>
-    );
-  }
-}
+import Line from './Line';
 
 class App extends React.Component {
   constructor(props) {
