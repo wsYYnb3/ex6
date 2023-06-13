@@ -15,7 +15,9 @@ class App extends React.Component {
     const { value } = this.state;
 
     return (
+    
       <div className="app-container">
+        <h1>Version 1 with classes</h1>
         <Line value1="1" value2="2" onClick={this.handleClick} />
         <Line value1="2" value2="4" onClick={this.handleClick} />
         <Line value1="3" value2="6" onClick={this.handleClick} />
